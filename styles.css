@@ -41,11 +41,18 @@ section{padding:84px 0}
 .sec-head{max-width:660px;margin-bottom:48px;padding-left:64px;position:relative}
 @media(max-width:760px){.sec-head{padding-left:0}}
 .sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:14px}
+.sec-head p{color:var(--ink-60);margin-top:14px}
+.schritt{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0 24px 64px;position:relative}
+.schritt .num{font-family:'Newsreader',serif;font-size:30px;font-style:italic;color:var(--sage)}
+.schritt h3{font-size:21px;margin-bottom:6px}
+.schritt p{color:var(--ink-60);max-width:560px}
+@media(max-width:760px){.schritt{padding-left:0}}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:860px){.cards{grid-template-columns:1fr}}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:28px 26px}
 .card .serif{font-size:20px;font-style:italic;color:var(--pine-soft);display:block;margin-bottom:14px}
 .card p{font-size:15.5px;color:var(--ink-60)}
+.card h3{font-size:21px;margin-bottom:10px}
 .card a.mehr{display:inline-block;margin-top:14px;font-size:14.5px;font-weight:600;color:var(--pine);text-decoration:none;border-bottom:1px solid var(--sage)}
 .leistungen-bg{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .leistung{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:34px 0 34px 64px;border-top:1px solid var(--line);position:relative}

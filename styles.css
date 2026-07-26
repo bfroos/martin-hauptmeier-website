@@ -8,6 +8,7 @@ html{scroll-behavior:smooth}
 body{font-family:'Figtree',system-ui,sans-serif;background:var(--mist);color:var(--ink);line-height:1.6;font-size:17px}
 h1,h2,h3,.serif{font-family:'Newsreader',Georgia,serif;font-weight:400;line-height:1.15}
 a{color:inherit}
+img{max-width:100%;height:auto}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--pine-soft)}
 header{position:sticky;top:0;z-index:50;background:rgba(242,244,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -34,8 +35,8 @@ nav ul a:hover{color:var(--pine)}
 .ort{margin-top:34px;font-size:14px;color:var(--ink-60);display:flex;align-items:center;gap:8px}
 .ort::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber);display:inline-block}
 .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:center}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
-.hero-portrait{width:100%;border-radius:16px;display:block;box-shadow:0 24px 48px -24px rgba(23,51,44,.35)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-portrait{max-width:340px}}
+.hero-portrait{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block;box-shadow:0 24px 48px -24px rgba(23,51,44,.35)}
 section{padding:84px 0}
 .sec-head{max-width:660px;margin-bottom:48px;padding-left:64px;position:relative}
 @media(max-width:760px){.sec-head{padding-left:0}}
@@ -57,8 +58,8 @@ section{padding:84px 0}
 @media(max-width:760px){.leistung{grid-template-columns:1fr;gap:10px;padding-left:0}}
 .ueber-bg{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .ueber-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:start}
-@media(max-width:860px){.ueber-grid{grid-template-columns:1fr}}
-.portrait-img{width:100%;border-radius:16px;display:block}
+@media(max-width:860px){.ueber-grid{grid-template-columns:1fr}.portrait-img{max-width:340px}}
+.portrait-img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block}
 .ueber-grid h2{font-size:clamp(28px,3.4vw,38px);margin:14px 0 20px}
 .ueber-grid p{color:var(--ink-60);margin-bottom:16px;max-width:580px}
 .quali{list-style:none;margin-top:24px;display:grid;gap:10px}

@@ -97,9 +97,13 @@ details.faq p{color:var(--ink-60);padding-bottom:18px;font-size:15.5px}
 .kontakt .btn:hover{background:var(--sage)}
 .kontakt .info{margin-top:38px;font-size:15px;color:#B9CCC0;display:flex;gap:32px;justify-content:center;flex-wrap:wrap}
 .kontakt .info a{color:#EDF2EE;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
-footer{background:var(--pine);border-top:1px solid rgba(255,255,255,.12);padding:32px 0;color:#8FA89B;font-size:13.5px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-footer nav a{color:#B9CCC0;text-decoration:none;margin-left:18px}
+footer{background:var(--pine);border-top:1px solid rgba(255,255,255,.12);padding:36px 0;color:#8FA89B;font-size:14px}
+footer p{margin:6px 0}
+footer .f-brand{color:#B9CCC0;font-weight:600}
+footer .f-links{line-height:2}
+footer .f-links a{color:#B9CCC0;text-decoration:none}
+footer .f-links a:hover{color:#fff}
+footer .f-legal{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.show{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}

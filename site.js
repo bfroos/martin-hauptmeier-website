@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
       '<a href="stressmanagement-seminar-frankfurt.html">Stressmanagement &amp; Burnout-Prävention</a> · ' +
       '<a href="workshop-psychisch-erkrankte-mitarbeiter-frankfurt.html">Psychisch erkrankte Mitarbeiter</a> · ' +
       '<a href="gespraechsfuehrung-training-fuehrungskraefte.html">Gesprächsführung &amp; Wirkung</a> · ' +
+      '<a href="fuehrungskraeftetraining-frankfurt.html">Führungskräftetraining &amp; Teamentwicklung</a> · ' +
+      '<a href="gefaehrdungsbeurteilung-psychische-belastung.html">Gefährdungsbeurteilung psychische Belastung</a> · ' +
       '<a href="bem-wiedereingliederung-frankfurt.html">BEM &amp; Wiedereingliederung</a> · ' +
       '<a href="akutberatung-psychische-erkrankung-arbeitsplatz.html">Akuter Fall</a> · ' +
       '<a href="vortrag-psychische-gesundheit-gesundheitstag.html">Vorträge &amp; Gesundheitstage</a> · ' +

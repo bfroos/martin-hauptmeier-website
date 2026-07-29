@@ -8,12 +8,41 @@ document.addEventListener('DOMContentLoaded', function () {
     ['index.html#ueber', 'Über mich'],
     ['psychotherapie-frankfurt-nordend.html', 'Psychotherapie']
   ];
+  var nav = document.querySelector('header nav');
   var ul = document.querySelector('header nav ul');
   if (ul) {
     ul.innerHTML = navItems.map(function (i) {
       return '<li><a href="' + i[0] + '">' + i[1] + '</a></li>';
     }).join('');
   }
+
+  // Burger-Menü (mobil)
+  var headerBar = document.querySelector('header .nav');
+  if (headerBar && nav) {
+    var btn = document.createElement('button');
+    btn.className = 'menu-btn';
+    btn.setAttribute('aria-label', 'Menü öffnen');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    });
+    headerBar.appendChild(btn);
+    // Menü schließen, wenn ein Link geklickt wird
+    if (ul) {
+      ul.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  }
+
   var f = document.querySelector('footer .wrap');
   if (f) {
     f.innerHTML =

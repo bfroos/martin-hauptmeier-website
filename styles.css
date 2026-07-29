@@ -22,7 +22,18 @@ nav ul a:hover{color:var(--pine)}
 .btn:hover{background:var(--pine-soft)}
 .btn.ghost{background:transparent;color:var(--pine);border:1px solid var(--pine)}
 .btn.ghost:hover{background:var(--pine);color:#fff}
-@media(max-width:860px){nav ul{display:none}}
+.menu-btn{display:none}
+@media(max-width:860px){
+  header nav ul{display:none}
+  .menu-btn{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:var(--paper);border:1px solid var(--line);border-radius:10px;cursor:pointer;flex-shrink:0}
+  .menu-btn span{display:block;width:20px;height:2px;background:var(--pine);transition:transform .2s ease,opacity .2s ease}
+  .menu-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-btn.open span:nth-child(2){opacity:0}
+  .menu-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  header nav.open ul{display:flex;flex-direction:column;gap:0;position:absolute;top:68px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 18px 32px -20px rgba(23,51,44,.35);padding:8px 0;z-index:60}
+  header nav.open ul a{display:block;padding:14px 24px;font-size:16px}
+  .nav .btn{padding:10px 16px;font-size:14px}
+}
 .faden{position:relative}
 .faden::before{content:"";position:absolute;left:24px;top:0;bottom:0;width:1px;background:linear-gradient(var(--sage),var(--pine));opacity:.55}
 .knoten{position:absolute;left:19.5px;width:10px;height:10px;border-radius:50%;background:var(--mist);border:2px solid var(--pine-soft)}
@@ -58,8 +69,9 @@ section{padding:84px 0}
 .leistung{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:34px 0 34px 64px;border-top:1px solid var(--line);position:relative}
 .leistung:last-of-type{border-bottom:1px solid var(--line)}
 .leistung h3{font-size:23px}
-.leistung h3 a{text-decoration:none;color:inherit}
-.leistung h3 a:hover{color:var(--pine-soft)}
+.leistung h3 a{text-decoration:none;color:var(--pine-soft);border-bottom:2px solid var(--sage);padding-bottom:2px;transition:color .2s,border-color .2s}
+.leistung h3 a::after{content:" →";font-family:'Figtree',sans-serif;font-size:.72em;font-weight:600;opacity:.75}
+.leistung h3 a:hover{color:var(--pine);border-color:var(--amber)}
 .leistung .tag{font-size:13px;color:var(--amber);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
 .leistung p{color:var(--ink-60);max-width:560px}
 @media(max-width:760px){.leistung{grid-template-columns:1fr;gap:10px;padding-left:0}}
@@ -83,6 +95,7 @@ section{padding:84px 0}
 .content p{color:var(--ink-60);margin-bottom:16px}
 .content ul{margin:0 0 16px 22px;color:var(--ink-60)}
 .content li{margin-bottom:8px}
+.content a{color:var(--pine-soft)}
 .hinweis{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;font-size:15.5px;color:var(--ink-60)}
 details.faq{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:0 22px}
 details.faq summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16.5px;list-style:none;position:relative;padding-right:32px}
